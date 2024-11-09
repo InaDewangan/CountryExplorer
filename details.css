@@ -1,0 +1,49 @@
+/* Country navbar styling */
+#country-navbar {
+    background-color: #0077b6; /* Blue background */
+    padding: 20px;
+    text-align: center; /* Centers the text */
+    color: white; /* White text color */
+    font-size: 32px;
+    font-weight: bold; /* Bold text */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Map section container */
+#map-section {
+    width: 100%; /* Full width */
+    height: 70vh; /* Takes 70% of the viewport height */
+    position: relative; /* For positioning child elements */
+}
+
+/* Country map styling */
+#country-map {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+/* Container for information cards */
+#info-cards-container {
+    display: flex; /* Horizontal layout */
+    gap: 1rem; /* Space between cards */
+    overflow-x: scroll; /* Horizontal scroll for overflow */
+    padding: 20px;
+}
+
+/* Back and like button styling */
+#back-btn, #like-btn {
+    /* padding: 10px; */
+    width: 60px;
+    height: 50px;
+    font-size: 18px;
+    background-color: #006994; /* Sea blue */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#back-btn {
+    width: 90px;
+}

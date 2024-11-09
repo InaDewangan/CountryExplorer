@@ -1,0 +1,331 @@
+/* Basic styling for the entire document */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+#navbar {
+    width: 100%; /* Full-width navbar */
+    position: fixed; /* Stays at the top even when scrolling */
+    top: 0;
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s; /* Smooth transition for background */
+    z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+/* Transparent state of the navbar */
+#navbar.transparent {
+    background-color: transparent;
+}
+
+/* Solid state of the navbar */
+#navbar.solid {
+    background-color: white; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Logo styling */
+.logo {
+    font-size: 24px;
+    color: #006994; /* Sea blue color */
+    font-weight: bold;
+}
+
+/* Styling for the navigation links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+/* Individual nav link styling */
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none; /* Removes underline */
+    color: #006994; /* Sea blue */
+    font-size: 18px;
+    transition: color 0.2s; /* Smooth color change */
+}
+
+/* Hover effect for nav links */
+.nav-links a:hover {
+    color: #004d73; /* Darker blue */
+}
+
+/* Video section styling */
+.video-section {
+    height: 70vh; /* Takes 70% of the viewport height */
+    position: relative;
+    overflow: hidden; /* Ensures video doesn't overflow */
+}
+
+/* Video element styling */
+#background-video {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Ensures video covers the section */
+}
+
+/* Overlay text on the video */
+.video-overlay {
+    position: absolute;
+    top: 50%; /* Centered vertically */
+    left: 50%; /* Centered horizontally */
+    transform: translate(-50%, -50%); /* Aligns perfectly to the center */
+    text-align: center;
+    color: white; /* White text */
+}
+
+/* Heading inside the video overlay */
+.video-overlay h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Search bar inside the video overlay */
+.video-search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 70%; /* Takes 70% of the container's width */
+    font-size: 16px;
+}
+
+/* Favorites bar styling */
+.favorites-bar {
+    position: fixed; /* Stays in position even on scroll */
+    right: -300px; /* Hidden by default (off-screen) */
+    top: 40px; /* Positioned just below the navbar */
+    width: 300px;
+    height: calc(100% - 60px); /* Leaves space for the navbar */
+    background-color: white; /* White background */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    overflow-y: auto; /* Scroll if content overflows */
+    transition: right 0.3s; /* Smooth slide-in transition */
+    padding: 20px;
+    display: none; /* Hidden by default */
+    color: #0077b6; /* Blue text */
+    text-align: center;
+    font-weight: bold;
+    z-index: 999; /* Ensures it stays above other content */
+}
+
+#favorites-content {
+    font-size: 20px;
+}
+
+/* Open state of the favorites bar */
+.favorites-bar.open {
+    display: block; /* Makes it visible */
+    right: 0; /* Slides it in */
+}
+
+.countries {
+    background-color: #E6E6FA;
+    overflow: hidden;
+}
+
+/* Show more button styling */
+#show-more {
+    display: block; /* Block-level element */
+    margin: 20px auto; /* Centered horizontally */
+    padding: 10px 20px;
+    background-color: #006994; /* Sea blue */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px;
+}
+
+/* Hover effect for the show more button */
+#show-more:hover {
+    background-color: #004d73; /* Darker blue */
+}
+
+/* Footer styling */
+footer {
+    text-align: center; /* Centered text */
+    padding: 1rem;
+    background-color: #0077b6; /* Blue background */
+    color: #fff; /* White text */
+}
+
+/* Suggestions dropdown styling */
+.suggestions {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-height: 200px; /* Limits the height */
+    overflow-y: auto; /* Scrollable if content overflows */
+    position: absolute;
+    top: 100%; /* Positioned below the input */
+    left: 17%; /* Adjusted position */
+    width: 65%; /* Width relative to the parent */
+    z-index: 1000; /* Stays above other elements */
+    color: black; /* Black text */
+}
+
+/* Individual suggestion item styling */
+.suggestions div {
+    padding: 10px;
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Hover effect for suggestions */
+.suggestions div:hover {
+    background-color: #9ddbd8; /* Light blue */
+}
+
+/* Country grid layout */
+.country-grid {
+    display: flex;
+    flex-wrap: wrap; /* Wraps items to the next line */
+    gap: 2rem; /* Space between items */
+    padding: 1rem;
+    justify-content: center; /* Centers items */
+    align-items: center; /* Centers items vertically */
+}
+
+/* Country flag image styling */
+.country-flag {
+    width: 100%; /* Full width of parent */
+    height: 100px; /* Fixed height */
+    object-fit: cover; /* Covers the area */
+}
+
+.country-name {
+    text-align: center;
+}
+
+/* Country card styling */
+.country-card {
+    width: 200px; /* Fixed width */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: hidden; /* Ensures content doesn't overflow */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling */
+}
+
+/* Hover effect for country card */
+.country-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Second section styling */
+.second-section {
+    text-align: center; /* Centered text */
+    color: #0077b6; /* Blue text */
+    font-size: 2em;
+}
+
+/* Filter section styling */
+.filter-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto; /* Center align */
+    padding: 10px;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 90%; /* Responsive width */
+}
+
+/* Filter label */
+.filter-label {
+    font-size: 16px;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+/* Dropdown styling */
+.filter-dropdown {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Filter search bar styling */
+#filter-search-bar {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+/* Responsive design for filter section */
+@media (max-width: 768px) {
+
+    .video-overlay h1 {
+        font-size: 30px;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 100%;
+    }
+    
+    #filter-search-bar {
+        width: 90%; /* Full width on small screens */
+    }
+
+    #video-search-bar {
+        width: 90%;
+    }
+
+    .favorites-bar {
+        top: 70px;
+    }
+}
+
+/* Updated styling for the favorite item layout */
+.favorites-bar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.favorites-bar li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px solid blue;
+    padding: 10px;
+    color: black;
+}
+
+.favorites-bar .country-flag {
+    width: 100px; /* Adjusted size for the flag */
+    height: 50px;
+    object-fit: cover;
+}
+
+.favorites-bar .remove-btn {
+    /* margin-top: 10px; */
+    background-color: #006994;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.favorites-bar .remove-btn:hover {
+    background-color: #097b9e;
+}
